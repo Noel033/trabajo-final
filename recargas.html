@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recargas - La Guarida de Antibush</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/@babel/standalone/babel.min.js"
+    ></script>
+    <link rel="stylesheet" href="CSS/style_nav.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel" src="JS/navigation.js"></script>
+    <script type="text/babel" src="JS/recharge_options.js"></script>
+    <script type="text/babel" src="JS/footer.js"></script>
+    <script type="text/babel" src="JS/reponsive.js"></script>
+    <script type="text/babel">
+      const App = () => (
+        <div>
+          <Navigation />
+          <RechargeOptions />
+          <Footer />
+        </div>
+      );
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>

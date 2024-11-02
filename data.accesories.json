@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Mouse Gamer RGB",
+    "imageUrl": "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/125240618_03/w=800,h=800,fit=pad.png",
+    "price": "$49.99",
+    "description": "Mouse gaming con sensor óptico y RGB personalizable"
+  },
+  {
+    "id": 2,
+    "name": "PC Gamer",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGuYyaHkY6gAMDL1K_qk0cx_9aKVZX6-h3_Q&s.png",
+    "price": "$4999.99",
+    "description": "PC Gamer con sensor óptico y RGB personalizable"
+  },
+  {
+    "id": 3,
+    "name": "Teclado Gamer",
+    "imageUrl": "https://promart.vteximg.com.br/arquivos/ids/7859828-1000-1000/135328.jpg?v=638446832992000000.png",
+    "price": "$99.99",
+    "description": "Teclado Gamer con sensor óptico y RGB personalizable"
+  },
+  {
+    "id": 4,
+    "name": "Monitor Gamer",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIrkbabiye31MXK9Auy4CAz69CCTpJojZrVw&s.png",
+    "price": "$599.99",
+    "description": "Monitor Gamer con sensor óptico y RGB personalizable"
+  },
+  {
+    "id": 5,
+    "name": "Cpu Gamer",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaB2a2Sb5PutSY8_MAQpnjOLXpk5M1q0drkw&s.png",
+    "price": "$69999.99",
+    "description": "Cpu Gamer con sensor óptico y RGB personalizable"
+  }
+]

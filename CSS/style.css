@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #0f1225;
+  color: #ffffff;
+}
+
+.hero-section {
+  height: 480px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://surtido.pe/wp-content/uploads/2020/04/Dota-2-Peru-infamous-4d-esports-beastcoast-infinity-esports-videojuego.jpg")
+      center/cover;
+}
+
+.tournament-card {
+  background: #1a1f3c;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.tournament-card:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  background-color: #1a1f3c;
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 300px;
+  }
+
+  .tournament-card {
+    margin-bottom: 1rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .image-section {
+    height: 200px;
+  }
+
+  .form-section {
+    padding: 20px;
+  }
+}

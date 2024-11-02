@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "name": "League of Legends",
+    "title": "Recarga para League of Legends",
+    "description": "Obtén RP para desbloquear campeones, skins y más.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFI97kJNHpZJQMlT1yxcx4K6MNPjrh7atzfw&s.png",
+    "currency": "RP",
+    "options": [
+      { "amount": "650 RP", "price": "$5 USD" },
+      { "amount": "1380 RP", "price": "$10 USD" },
+      { "amount": "2800 RP", "price": "$20 USD" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Dota 2",
+    "title": "Recarga para Dota 2",
+    "description": "Adquiere Cash para obtener artículos exclusivos.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrpC35uYVYTE7WVggg6AJeuaRhiqMAUiCw7g&s.png",
+    "currency": "Cash",
+    "options": [
+      { "amount": "5000 Cash", "price": "$50 USD" },
+      { "amount": "1500 Cash", "price": "$100 USD" },
+      { "amount": "2800 Cash", "price": "$200 USD" }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "MLBB",
+    "title": "Recarga para Mobile Legends",
+    "description": "Compra diamantes para skins, emotes y héroes.",
+    "imageUrl": "https://bonoxs.com/media/catalog/product/cache/1b4f2a02dc2cb7d299364f0e7e2d60e8/m/l/mlbb_recargadirecta_240x300.jpg",
+    "currency": "Diamantes",
+    "options": [
+      { "amount": "1000 Diam", "price": "$30 USD" },
+      { "amount": "2000 Diam", "price": "$50 USD" },
+      { "amount": "5000 Diam", "price": "$150 USD" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "CSGO",
+    "title": "Recarga para CSGO",
+    "description": "Aumenta tu Cash para personalizar tus armas y equipo.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTr8ntoRtH4HES8S3yfvPhzMUpxn7hhgpArw&s.png",
+    "currency": "Cash",
+    "options": [
+      { "amount": "3000 Cash", "price": "$50 USD" },
+      { "amount": "15800 Cash", "price": "$100 USD" },
+      { "amount": "30000 Cash", "price": "$200 USD" }
+    ]
+  }
+]

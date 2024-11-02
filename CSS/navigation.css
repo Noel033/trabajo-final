@@ -1,0 +1,32 @@
+header,
+nav {
+  background-color: #1a1f3c;
+  color: #ffffff;
+}
+
+.navbar-logo {
+  width: 48px;
+  height: 48px;
+}
+
+nav {
+  padding: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #6366f1;
+}
