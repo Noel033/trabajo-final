@@ -77,6 +77,35 @@ const AboutContent = () => {
             </p>
           </div>
         </div>
+
+        <div className="mt-12 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6">
+            Nuestros Creadores
+          </h2>
+          <div className="flex justify-center space-x-4">
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-indigo-500">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDcKB-HGZhcg_p1io8vK3VbriM5KwHX8Ugng&s"
+                alt="Creador 1"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-indigo-500">
+              <img
+                src="https://m.media-amazon.com/images/I/614a17UMELL._AC_UF1000,1000_QL80_.jpg"
+                alt="Creador 2"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-indigo-500">
+              <img
+                src="https://m.media-amazon.com/images/I/61k8l8TyquL._AC_UF894,1000_QL80_.jpg"
+                alt="Creador 3"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

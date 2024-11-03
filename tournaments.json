@@ -3,11 +3,10 @@
     "id": 1,
     "game": "League of Legends",
     "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxMOEBFetKxj3ZIkF8umBWm5XXsMPEk4AmBg&s.png",
-    "prize": "1,000",
+    "prize": "$1,000 USD",
     "date": "15 de Diciembre",
     "players": "128",
-    "status": "Inscripciones abiertas",
-    "description": "Torneo competitivo de League of Legends con premios en efectivo"
+    "status": "Inscripciones abiertas"
   },
   {
     "id": 2,

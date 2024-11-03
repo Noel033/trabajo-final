@@ -1,8 +1,15 @@
-const AccessoryCard = ({ item }) => {
-  const [isAdded, setIsAdded] = React.useState(false);
+const AccessoryCard = ({ item, openModal }) => {
+  const [isPurchased, setIsPurchased] = React.useState(false);
+
+  const handleBuyClick = () => {
+    setIsPurchased(true);
+  };
 
   return (
-    <div className="tournament-card p-4 bg-gray-800 rounded-lg">
+    <div
+      className="tournament-card p-4 bg-gray-800 rounded-lg cursor-pointer"
+      onClick={() => openModal(item)}
+    >
       <img
         src={item.imageUrl}
         alt={item.name}
@@ -12,13 +19,16 @@ const AccessoryCard = ({ item }) => {
       <p className="text-gray-400 mb-2">{item.description}</p>
       <p className="text-xl text-indigo-400 mb-4">{item.price}</p>
       <button
-        onClick={() => setIsAdded(true)}
-        className={`w-full ${
-          isAdded ? "bg-green-600" : "bg-indigo-600 hover:bg-indigo-700"
-        } py-2 rounded text-white`}
-        disabled={isAdded}
+        onClick={(e) => {
+          e.stopPropagation();
+          handleBuyClick();
+        }}
+        className={`w-full py-2 rounded text-white ${
+          isPurchased ? "bg-green-600" : "bg-indigo-600 hover:bg-indigo-700"
+        }`}
+        disabled={isPurchased}
       >
-        {isAdded ? "Añadido" : "Añadir al carrito"}
+        {isPurchased ? "Comprado" : "Comprar"}
       </button>
     </div>
   );
@@ -29,6 +39,7 @@ const AccessoriesList = () => {
   const [filteredAccessories, setFilteredAccessories] = React.useState([]);
   const [selectedCategory, setSelectedCategory] = React.useState("Todos");
   const [priceRange, setPriceRange] = React.useState("Todos");
+  const [modalContent, setModalContent] = React.useState(null);
 
   React.useEffect(() => {
     fetch("data.accesories.json")
@@ -42,10 +53,11 @@ const AccessoriesList = () => {
 
   const categories = {
     Todos: () => true,
-    Teclados: (item) => item.category === "keyboard",
-    Ratones: (item) => item.category === "mouse",
-    Auriculares: (item) => item.category === "headset",
-    Monitores: (item) => item.category === "monitor",
+    Teclados: (item) => item.name.toLowerCase().includes("teclado"),
+    Ratones: (item) => item.name.toLowerCase().includes("mouse"),
+    Auriculares: (item) => item.name.toLowerCase().includes("auricular"),
+    Monitores: (item) => item.name.toLowerCase().includes("monitor"),
+    "PC Gamer": (item) => item.name.toLowerCase().includes("pc"),
   };
 
   const priceRanges = {
@@ -54,10 +66,10 @@ const AccessoriesList = () => {
       parseFloat(item.price.replace(/[^0-9.]/g, "")) < 50,
     "$50 - $100": (item) => {
       const price = parseFloat(item.price.replace(/[^0-9.]/g, ""));
-      return price >= 50 && price <= 100;
+      return price >= 50 && price < 100;
     },
     "Más de $100": (item) =>
-      parseFloat(item.price.replace(/[^0-9.]/g, "")) > 100,
+      parseFloat(item.price.replace(/[^0-9.]/g, "")) >= 100,
   };
 
   React.useEffect(() => {
@@ -67,6 +79,14 @@ const AccessoriesList = () => {
     );
     setFilteredAccessories(filtered);
   }, [selectedCategory, priceRange, accessories]);
+
+  const openModal = (item) => {
+    setModalContent(item);
+  };
+
+  const closeModal = () => {
+    setModalContent(null);
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -108,9 +128,34 @@ const AccessoriesList = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {filteredAccessories.map((item) => (
-          <AccessoryCard key={item.id} item={item} />
+          <AccessoryCard key={item.id} item={item} openModal={openModal} />
         ))}
       </div>
+
+      {modalContent && (
+        <div className="modal fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+          <div className="modal-content bg-gray-800 p-8 rounded-lg text-center">
+            <h2 className="text-2xl font-bold mb-2 text-white">
+              {modalContent.name}
+            </h2>
+            <p className="mb-2 text-gray-400">{modalContent.description}</p>
+            <p className="text-xl font-semibold text-indigo-400">
+              {modalContent.price}
+            </p>
+            <img
+              src={modalContent.imageUrl}
+              alt={modalContent.name}
+              className="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <button
+              onClick={closeModal}
+              className="mt-4 bg-red-500 hover:bg-red-700 text-white px-4 py-2 rounded"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

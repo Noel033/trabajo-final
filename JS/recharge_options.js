@@ -20,10 +20,13 @@ const RechargeOptions = () => {
   const categories = {
     Todos: () => true,
     Móvil: (game) =>
-      ["Mobile Legends", "Free Fire", "PUBG Mobile"].includes(game.title),
+      game.name === "MLBB" ||
+      game.name === "Free Fire" ||
+      game.name === "PUBG Mobile",
     PC: (game) =>
-      ["League of Legends", "Valorant", "Steam"].includes(game.title),
-    Consola: (game) => ["PlayStation", "Xbox", "Nintendo"].includes(game.title),
+      game.name === "League of Legends" ||
+      game.name === "Dota 2" ||
+      game.name === "CSGO",
   };
 
   const priceRanges = {
